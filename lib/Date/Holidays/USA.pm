@@ -16,10 +16,6 @@ our $VERSION = '0.0101';
 
 =encoding utf-8
 
-=head1 NAME
-
-Date::Holidays::USA - Provides United States of America holidays
-
 =head1 SYNOPSIS
 
   # Using with the Date::Holidays module (recommended):
