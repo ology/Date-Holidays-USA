@@ -18,7 +18,7 @@ our $VERSION = '0.0102';
 
 =head1 SYNOPSIS
 
-  # Using with the Date::Holidays module (recommended):
+  # Using with the Date::Holidays module:
   use Date::Holidays ();
   my $dh = Date::Holidays->new(countrycode => 'USA', nocheck => 1);
   print $dh->is_holiday(year => 2024, month => 1, day => 1), "\n";
@@ -29,6 +29,7 @@ our $VERSION = '0.0102';
   $dh = Date::Holidays::USA->new;
   print $dh->is_holiday(2024, 1, 1), "\n";
   $h = $dh->holidays;
+  $h = $dh->us_holidays(2032);
 
 =head1 DESCRIPTION
 
@@ -71,16 +72,17 @@ sub is_holiday {
     return $holidays->{$str} ? $holidays->{$str} : undef;
 }
 
-=head2 holidays
+=head2 us_holidays
 
-  my $holidays = holidays($year);
+  $holidays = us_holidays;
+  $holidays = us_holidays($year);
 
 Returns a hash reference of holiday names, where the keys are by month
 and day.
 
 =cut
 
-sub holidays {
+sub us_holidays {
     my ($self, $year) = @_;
     unless ($year) {
       $year = (localtime)[5];
@@ -140,11 +142,27 @@ sub holidays {
     );
     my ($month, $day) = easter($year);
     $holidays{$month}->{$day} = 'Easter';
+    return \%holidays;
+}
+
+=head2 holidays
+
+  $holidays = holidays;
+  $holidays = holidays($year);
+
+Returns a hash reference of holiday names, where the keys are 4 digit
+strings month and day.
+
+=cut
+
+sub holidays {
+    my ($self, $year) = @_;
+    my $holidays = $self->us_holidays($year);
     my %rtn;
-    for $month (sort { $a <=> $b } keys %holidays) {
-        for $day (sort { $a <=> $b } keys %{ $holidays{$month} }) {
-            $rtn{ sprintf '%02d%02d', $month, $day } = $holidays{$month}->{$day}
-                if $holidays{$month}->{$day};
+    for my $month (sort { $a <=> $b } keys %$holidays) {
+        for my $day (sort { $a <=> $b } keys %{ $holidays->{$month} }) {
+            $rtn{ sprintf '%02d%02d', $month, $day } = $holidays->{$month}->{$day}
+                if $holidays->{$month}->{$day};
         }
     }
     return \%rtn;
