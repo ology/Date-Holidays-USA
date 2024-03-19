@@ -28,13 +28,13 @@ Date::Holidays::USA - Provides United States of America holidays
   my ($year, $month, $day) = (localtime)[5, 4, 3];
   $year  += 1900;
   $month += 1;
-  say "Woohoo!" if $dh->is_holiday($year, $month, $day);
+  print "Woohoo!\n" if $dh->is_holiday($year, $month, $day);
   my $h = $dh->holidays;
 
   # Using the Date::Holidays::USA module directly:
   use Date::Holidays::USA ();
   $dh = Date::Holidays::USA->new;
-  say "Woohoo!" if $dh->is_holiday($year, $month, $day);
+  print "Woohoo!\n" if $dh->is_holiday($year, $month, $day);
   $h = $dh->holidays($year);
 
 =head1 DESCRIPTION
