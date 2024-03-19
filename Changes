@@ -1,6 +1,7 @@
 Revision history for Date-Holidays-USA
 
 {{$NEXT}}
+    - Fix SYNOPSIS.
 
 0.0100 2024-03-19 13:09:16
     - Mint with Dist::Zilla.
