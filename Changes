@@ -1,0 +1,5 @@
+Revision history for Date-Holidays-USA
+
+{{$NEXT}}
+    - Mint with Dist::Zilla.
+    - Modify heavily from Date::Holidays::* and Date::Holidays::Adapter::*.
