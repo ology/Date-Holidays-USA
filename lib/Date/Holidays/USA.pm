@@ -184,4 +184,6 @@ L<Date::Holidays>
 
 L<Date::Holidays::Adapter>
 
+L<Date::Holidays::Adapter::USA>
+
 =cut
