@@ -14,5 +14,8 @@ is $got, "New Year's", 'is_holiday';
 $got = $dh->holidays(2024);
 is $got->{'0331'}, 'Easter', 'holidays';
 
+$got = $dh->us_holidays(2023);
+is $got->{4}{9}, 'Easter', 'us_holidays';
+
 done_testing();
 
