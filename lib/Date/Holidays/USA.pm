@@ -25,16 +25,13 @@ Date::Holidays::USA - Provides United States of America holidays
   # Using with the Date::Holidays module (recommended):
   use Date::Holidays ();
   my $dh = Date::Holidays->new(countrycode => 'USA', nocheck => 1);
-  my ($year, $month, $day) = (localtime)[5, 4, 3];
-  $year  += 1900;
-  $month += 1;
-  print "Woohoo!\n" if $dh->is_holiday($year, $month, $day);
+  print $dh->is_holiday(year => 2024, month => 1, day => 1), "\n";
   my $h = $dh->holidays;
 
   # Using the Date::Holidays::USA module directly:
   use Date::Holidays::USA ();
   $dh = Date::Holidays::USA->new;
-  print "Woohoo!\n" if $dh->is_holiday($year, $month, $day);
+  print $dh->is_holiday(2024, 1, 1), "\n";
   $h = $dh->holidays($year);
 
 =head1 DESCRIPTION
