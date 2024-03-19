@@ -32,7 +32,7 @@ Date::Holidays::USA - Provides United States of America holidays
   use Date::Holidays::USA ();
   $dh = Date::Holidays::USA->new;
   print $dh->is_holiday(2024, 1, 1), "\n";
-  $h = $dh->holidays($year);
+  $h = $dh->holidays;
 
 =head1 DESCRIPTION
 
