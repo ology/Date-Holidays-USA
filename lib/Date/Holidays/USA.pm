@@ -12,7 +12,7 @@ use Exporter qw(import);
 
 our @EXPORT = qw(is_holiday holidays);
 
-our $VERSION = '0.0000_1';
+our $VERSION = '0.0100';
 
 =encoding utf-8
 
