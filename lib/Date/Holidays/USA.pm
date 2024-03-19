@@ -180,3 +180,12 @@ sub _nth_day_of_month {
 }
 
 1;
+__END__
+
+=head1 SEE ALSO
+
+L<Date::Holidays>
+
+L<Date::Holidays::Adapter>
+
+=cut
