@@ -1,6 +1,7 @@
 Revision history for Date-Holidays-USA
 
 {{$NEXT}}
+    - Drop circular dependents.
 
 0.0200 2024-03-19 15:51:00
     - Fix docs.
