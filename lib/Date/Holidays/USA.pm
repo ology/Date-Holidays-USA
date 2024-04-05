@@ -90,6 +90,7 @@ sub us_holidays {
     }
     my %dom = (
         memorial     => _nth_day_of_month(-1, 1, $year, 5),
+        mothers      => _nth_day_of_month(2, 1, $year, 5),
         fathers      => _nth_day_of_month(3, 7, $year, 6),
         labor        => _nth_day_of_month(1, 1, $year, 9),
         columbus     => _nth_day_of_month(2, 1, $year, 10),
