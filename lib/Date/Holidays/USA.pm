@@ -112,6 +112,7 @@ sub us_holidays {
         },
         5 => {
             5 => 'Cinco de Mayo',
+            $dom{mothers}  => "Mother's",
             $dom{memorial} => 'Memorial',
         },
         6 => {
