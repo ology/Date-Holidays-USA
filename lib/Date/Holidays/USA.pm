@@ -133,7 +133,7 @@ sub us_holidays {
             31 => 'Halloween'
         },
         11 => {
-            11 => 'Veterans',
+            11 => "Veteran's Day",
             $dom{thanksgiving} => 'Thanksgiving',
         },
         12 => {
