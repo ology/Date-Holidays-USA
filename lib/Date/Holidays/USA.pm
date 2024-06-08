@@ -52,7 +52,7 @@ sub new {
 
 =head2 is_holiday
 
-  $holiday = is_holiday($year, $month, $day);
+  $holiday = $dh->is_holiday($year, $month, $day);
 
 Takes three arguments:
 
@@ -74,8 +74,8 @@ sub is_holiday {
 
 =head2 us_holidays
 
-  $holidays = us_holidays;
-  $holidays = us_holidays($year);
+  $holidays = $dh->us_holidays;
+  $holidays = $dh->us_holidays($year);
 
 Returns a hash reference of holiday names, where the keys are by month
 and day.
@@ -149,8 +149,8 @@ sub us_holidays {
 
 =head2 holidays
 
-  $holidays = holidays;
-  $holidays = holidays($year);
+  $holidays = $dh->holidays;
+  $holidays = $dh->holidays($year);
 
 Returns a hash reference of holiday names, where the keys are 4 digit
 strings month and day.
