@@ -1,9 +1,10 @@
-Revision history for Date-Holidays-USA
+Revision history for Date-Holidays-USExtended
 
 {{$NEXT}}
+    - Rename this module to Date::Holidays::USExtended.
 
 0.0208_1 2024-09-23 14:52:39
-    - Deprecate this module.
+    - Deprecate the Date::Holidays::USA module.
 
 0.0207 2024-06-07 19:32:38
     - Fix documented examples.

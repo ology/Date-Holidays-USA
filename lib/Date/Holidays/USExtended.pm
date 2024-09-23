@@ -1,6 +1,6 @@
-package Date::Holidays::USA;
+package Date::Holidays::USExtended;
 
-# ABSTRACT: DEPRECATED - Provides United States of America holidays
+# ABSTRACT: Provides an extended set of United States holidays
 
 use warnings;
 use strict;
@@ -20,29 +20,28 @@ our $VERSION = '0.0208_1';
 
   # Using with the Date::Holidays module:
   use Date::Holidays ();
-  my $dh = Date::Holidays->new(countrycode => 'USA', nocheck => 1);
+  my $dh = Date::Holidays->new(countrycode => 'USExtended', nocheck => 1);
   print $dh->is_holiday(year => 2024, month => 1, day => 1), "\n";
   my $h = $dh->holidays;
 
-  # Using the Date::Holidays::USA module directly:
-  use Date::Holidays::USA ();
-  $dh = Date::Holidays::USA->new;
+  # Using the Date::Holidays::USExtended module directly:
+  use Date::Holidays::USExtended ();
+  $dh = Date::Holidays::USExtended->new;
   print $dh->is_holiday(2024, 1, 1), "\n";
   $h = $dh->holidays;
   $h = $dh->us_holidays(2032);
 
 =head1 DESCRIPTION
 
-C<Date::Holidays::USA> is a now deprecated module that provided United
-States of America holidays.
+C<Date::Holidays::USExtended> provides an extended set of United States holidays.
 
 =head1 METHODS
 
 =head2 new
 
-  $dh = Date::Holidays::USA->new;
+  $dh = Date::Holidays::USExtended->new;
 
-Return a new C<Date::Holidays::USA> object.
+Return a new C<Date::Holidays::USExtended> object.
 
 =cut
 

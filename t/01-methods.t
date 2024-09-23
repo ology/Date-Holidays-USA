@@ -4,9 +4,9 @@ use warnings;
 
 use Test::More;
 
-use_ok 'Date::Holidays::USA';
+use_ok 'Date::Holidays::USExtended';
 
-my $dh = new_ok 'Date::Holidays::USA';
+my $dh = new_ok 'Date::Holidays::USExtended';
 
 my %holidays = ( # 2024
   '0101' => "New Year's Day",
