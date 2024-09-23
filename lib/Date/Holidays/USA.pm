@@ -1,6 +1,6 @@
 package Date::Holidays::USA;
 
-# ABSTRACT: Provides United States of America holidays
+# ABSTRACT: DEPRECATED - Provides United States of America holidays
 
 use warnings;
 use strict;
@@ -12,7 +12,7 @@ use Exporter qw(import);
 
 our @EXPORT = qw(is_holiday holidays);
 
-our $VERSION = '0.0207';
+our $VERSION = '0.0208_1';
 
 =encoding utf-8
 
@@ -33,7 +33,8 @@ our $VERSION = '0.0207';
 
 =head1 DESCRIPTION
 
-C<Date::Holidays::USA> provides United States of America holidays.
+C<Date::Holidays::USA> is a now deprecated module that provided United
+States of America holidays.
 
 =head1 METHODS
 
